@@ -1,0 +1,33 @@
+
+<app-navbar></app-navbar>
+
+<ion-content>
+    <h1 class="page-title">Health news</h1>
+
+    <main>
+    <div class="cards-container">
+      <div
+        class="article-card"
+        *ngFor="let p of healthNewsDisplay; index as i"
+        routerLink="/article/{{i}}"
+      >
+        <ion-img id="thumbnail" [src]="p.urlToImage" alt=""></ion-img>
+        <div class="published-date detail">
+          <span>Published on: </span>{{p.publishedAt | date: "yy/MM/dd"}}
+        </div>
+        <div class="article-title detail">{{p.title}}</div>
+        <!-- <div class="read-more detail">Read more</div> -->
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="info">
+      <p class="about">About</p>
+      <p class="contact">Contact us</p>
+      <p class="privacy-policy">Privacy policy</p>
+      <p class="help">Help / Support</p>
+    </div>
+    <div class="copy-right"><p>&copy; News App 2022 August</p></div>
+  </footer>
+</ion-content>

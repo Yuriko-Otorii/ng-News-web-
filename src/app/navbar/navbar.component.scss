@@ -1,0 +1,39 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'EB Garamond', serif;
+}
+
+.navbar{
+    width: 100%;
+    height: 5em;
+    padding: .5em .5em .5em 1.5em;
+    background-color: #003D5B;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .nav-menu-button{
+    font-size: 1em;
+    font-family: sans-serif; 
+    display: inline;
+    margin-right: 2em;
+  }
+  
+  .nav-menu-button{
+    text-decoration: none;
+    color: black;
+    border-bottom: 0;
+  }
+  
+  .nav-menu-button:hover{
+    background-color: rgb(209, 209, 209);
+  }
+  
+  .category-link{
+    font-size: 1.5em;
+    color: #FFFFFF;
+  }
+  

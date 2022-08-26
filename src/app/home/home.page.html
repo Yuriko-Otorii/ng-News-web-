@@ -1,20 +1,37 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<app-navbar></app-navbar>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+    <h1 class="page-title">Topheading news</h1>
+    
+    <main>
+      <div class="cards-container">
+        <div
+          class="article-card"
+          *ngFor="let p of topHeadingDisplay; index as i"
+          routerLink="/article/{{i}}"
+        >
+          <ion-img id="thumbnail" [src]="p.urlToImage" alt=""></ion-img>
+          <div class="published-date detail">
+            <span>Published on: </span>{{p.publishedAt | date: "yy/MM/dd"}}
+          </div>
+          <div class="article-title detail">{{p.title}}</div>
+        </div>
+      </div>
+    </main>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <footer>
+    <div class="info">
+      <p class="about">About</p>
+      <p class="contact">Contact us</p>
+      <p class="privacy-policy">Privacy policy</p>
+      <p class="help">Help / Support</p>
+    </div>
+    <div class="sns-icons">
+      <div class="insta icon"></div>
+      <div class="facebook icon"></div>
+      <div class="twitter icon"></div>
+      <div class="youtube icon"></div>
+    </div>
+    <div class="copy-right"><p>&copy; News App 2022 August</p></div>
+  </footer>
 </ion-content>
