@@ -4,3 +4,55 @@
     box-sizing: border-box;
     font-family: 'EB Garamond', serif;
   }
+
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3em;
+}
+
+#thumbnail{
+  width: 70%;
+  height: auto;
+}
+
+.credit{
+  font-size: .9em;
+  color: #7d7d7d;
+  margin-bottom: 2em;
+}
+
+.text-contents{
+  text-align: center;
+  width: 80%;
+}
+
+h1{
+  font-size: 2.5em;
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+
+.author-date{
+  font-size: 1.3em;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2em;
+  color: #7d7d7d;
+}
+
+hr {
+  height: .1em;
+  background-color: #a7a7a7;
+  border: none;
+  margin: 0 auto;
+}
+
+
+.content{
+  margin-top: 1.3em;
+  font-size: 2em;
+}
+
+

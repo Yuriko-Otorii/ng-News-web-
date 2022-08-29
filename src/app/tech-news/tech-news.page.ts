@@ -9,8 +9,6 @@ import { LoadingController } from '@ionic/angular';
 })
 export class TechNewsPage implements OnInit {
 
-  techNewsDisplay:any =[];
-
   constructor(
     public service: ApiService,
     public loadingController: LoadingController
@@ -22,7 +20,7 @@ export class TechNewsPage implements OnInit {
   });
   await loading.present();
     this.service.techNews().subscribe(data=> {
-      this.techNewsDisplay = data.articles;
+      this.service.listOfArticle = data.articles;
       console.log(data);
     })
     loading.dismiss();

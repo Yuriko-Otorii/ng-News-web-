@@ -9,8 +9,6 @@ import { LoadingController } from '@ionic/angular';
 })
 export class HealthPage implements OnInit {
 
-  healthNewsDisplay:any =[];
-
 
   constructor(
     public service: ApiService,
@@ -23,7 +21,7 @@ export class HealthPage implements OnInit {
     });
     await loading.present();
       this.service.healthNews().subscribe(data=> {
-        this.healthNewsDisplay = data.articles;
+        this.service.listOfArticle = data.articles;
         console.log(data);
       })
       loading.dismiss();

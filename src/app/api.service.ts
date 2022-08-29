@@ -7,7 +7,10 @@ import { Observable } from 'rxjs';
 })
 export class ApiService {
 
-constructor(private http: HttpClient) { }
+  listOfArticle:any = [];
+
+
+constructor(private http: HttpClient) { this.listOfArticle }
 
 
 topHeadingApiUrl = "https://newsapi.org/v2/top-headlines?country=us&apiKey=ccfe19324d454d24b9dd7d0a8fcfb185";
@@ -41,6 +44,7 @@ entertainmentNews(): Observable<any>{
 sportsNews(): Observable<any>{
   return this.http.get(this.sportsApiUrl);
 }
+
 
 
 }

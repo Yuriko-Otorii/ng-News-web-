@@ -9,9 +9,6 @@ import { LoadingController } from '@ionic/angular';
 })
 export class BusinessPage implements OnInit {
 
-  businessNewsDisplay:any =[];
-
-
   constructor(
     public service: ApiService,
     public loadingController: LoadingController
@@ -23,7 +20,7 @@ export class BusinessPage implements OnInit {
     });
     await loading.present();
       this.service.businessNews().subscribe(data=> {
-        this.businessNewsDisplay = data.articles;
+        this.service.listOfArticle = data.articles;
         console.log(data);
       })
       loading.dismiss();

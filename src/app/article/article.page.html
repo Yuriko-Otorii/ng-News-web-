@@ -9,16 +9,23 @@
   </ion-toolbar>
 </ion-header>
 
-<!-- <ion-content>
-<ion-card>
-  <ion-card-header>
-    <ion-card-subtitle>
-      {{post.date | date: "yyyy/mm/dd"}}
-    </ion-card-subtitle>
-    <ion-card-title>{{post.title}}</ion-card-title>
-  </ion-card-header>
-</ion-card>
-<div class="ion-padding">{{post.content}}</div>
-</ion-content> -->
+<ion-content>
+  <div class="container">
+    <p class="published-media">{{post.name}}</p>
+    <ion-img id="thumbnail" [src]="post.urlToImage" alt=""></ion-img>
+    <p class="credit">Provided by author</p>
+    <div class="text-contents">
+      <h1 class="title">{{post.title}}</h1>
+      <div class="author-date">
+        <!-- <p class="published-date">{{post.publishedAt | date:'short':'IST'}}</p> -->
+        <p class="author">by {{post.author}}</p>
+      </div>
+      
+      <hr width="100%" align="”center”" />
 
+      <p class="content">{{post.content}}</p>
+    </div>
+  </div>
 
+  <app-footer></app-footer>
+</ion-content>

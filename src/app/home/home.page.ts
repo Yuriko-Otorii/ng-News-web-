@@ -9,9 +9,6 @@ import { ApiService } from '../api.service'
 })
 export class HomePage {
 
-  topHeadingDisplay:any = [];
-  // idNumber: number;
-
   constructor( 
     public service: ApiService,
     public loadingController: LoadingController,
@@ -23,20 +20,12 @@ export class HomePage {
     });
     await loading.present();
       this.service.topHeading().subscribe(data => {
-        this.topHeadingDisplay = data.articles;
-        // this.numberingId();
-        console.log(data);
-        console.log(data.articles[0].url);
-        // console.log(this.topHeadingDisplay[0].source.id);
-        // console.log(this.topHeadingDisplay);
+        this.service.listOfArticle = data.articles;
       });
+      
       loading.dismiss();
     };    
   
-    // numberingId(){
-    //   for(const[index, value] of this.topHeadingDisplay.entries()){
-
-    //   }
    }
 
   

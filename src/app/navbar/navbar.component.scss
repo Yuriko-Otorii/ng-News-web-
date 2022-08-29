@@ -5,6 +5,10 @@
   font-family: 'EB Garamond', serif;
 }
 
+a{
+  text-decoration: none;
+}
+
 .navbar{
     width: 100%;
     height: 5em;
@@ -29,7 +33,8 @@
   }
   
   .nav-menu-button:hover{
-    background-color: rgb(209, 209, 209);
+    cursor: pointer;
+    color: #f4f4f4;
   }
   
   .category-link{

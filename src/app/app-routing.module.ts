@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
-import { TechNewsPage } from './tech-news/tech-news.page';
+import { ArticlePage } from './article/article.page';
  
+
 const routes: Routes = [
   {
     path: '',
@@ -14,12 +15,13 @@ const routes: Routes = [
   },
   {
     path: 'tech',
-    // loadChildren: () => import('./tech-news/tech-news.module').then( m => m.TechNewsPageModule)
-    component: TechNewsPage
+    loadChildren: () => import('./tech-news/tech-news.module').then( m => m.TechNewsPageModule)
+    // component: TechNewsPage
   },
   {
     path: 'article/:id',
-    loadChildren: () => import('./article/article.module').then( m => m.ArticlePageModule)
+    // loadChildren: () => import('./article/article.module').then( m => m.ArticlePageModule)
+    component: ArticlePage
   },
   {
     path: 'health',
